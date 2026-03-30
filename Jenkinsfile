@@ -10,8 +10,20 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'echo "This is real build step"'
+                sh 'echo "Building project..."'
                 sh 'ls -l'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests..."'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying application..."'
             }
         }
     }
