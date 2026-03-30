@@ -21,10 +21,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying application..."'
-            }
-        }
+       stage('Deploy') {
+           steps {
+               sh '''
+             cp index.html /var/www/html/
+             '''
+           }
+       }
     }
 }
