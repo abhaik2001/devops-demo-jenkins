@@ -10,7 +10,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building project..."
+                sh 'echo "This is real build step"'
+                sh 'ls -l'
             }
         }
     }
